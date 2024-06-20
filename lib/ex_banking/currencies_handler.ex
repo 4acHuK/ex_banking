@@ -10,7 +10,7 @@ defmodule ExBanking.CurrenciesHandler do
   end
 
   def create_currency(currency) do
-    GenServer.cast(__MODULE__, {:create_currencies, currency})
+    GenServer.cast(__MODULE__, {:create_currency, currency})
   end
 
   def handle_cast({:create_currency, currency}, currencies) do
